@@ -1,54 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Book</title>
     <style>
-        body{
+        body {
             background-color: #8EC5FC;
             background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-           
+
         }
-        .in-box{
+
+        .in-box {
             width: 500px;
             padding: 8px 10px;
             font-size: 23px;
         }
-        .btn{
+
+        .btn {
             width: 200px;
             margin-left: 10px;
             border-radius: 5px;
             border: 1px solid #000;
             cursor: pointer;
         }
-        .btn:hover{
+
+        .btn:hover {
             box-shadow: 1px 1px 2px 2px gray;
+        }
+        .result-text{
+            font-size: 28px;
+            font-family: cursive;
         }
     </style>
 </head>
+
 <body>
     <h1 class="app-heading">📕📘Basic PhoneBook</h1>
-    <input type="text" placeholder="Search..." id="search" class="in-box">
-    <button type="button" class="in-box btn">Search</button>
-    <p></p>
+    <input type="text" placeholder="Search..." id="searchBox" class="in-box">
+    <button type="button" class="in-box btn" onclick="search()">Search</button>
+    <p id="result" class="result-text"></p>
 
     <script>
-        const contacts={
-            Deepali:"8888132548",
-            Sameer:"9524613725",
-            Archana:"7081245680",
-            Vidya:"5214697234",
-            Pooja:"9874253158",
-            Arpita:"8726485135",
-            Sanchit:"7325486241",
-            Pradip:"8742563189"
+        const contacts = {
+            deepali: "8888132548",
+            sameer: "9524613725",
+            archana: "7081245680",
+            vidya: "5214697234",
+            pooja: "9874253158",
+            arpita: "8726485135",
+            sanchit: "7325486241",
+            pradip: "8742563189"
         }
-        function searchContacts(){
-            const searchInput = document.getElementById("search");
+        function search() {
+            const searchInput = document.getElementById("searchBox");
             const query = searchInput.value.toLowerCase();
-            
+            const number = contacts[query]
+            const result = document.getElementById("result");
+
+            if(number) {
+                result.innerText = `Mobile number of ${query} is ${number}`;
+            }
+
         }
+
     </script>
 </body>
+
 </html>
