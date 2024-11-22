@@ -4,8 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Book</title>
+    <style>
+        body{
+            background-color: #8EC5FC;
+            background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+           
+        }
+        .in-box{
+            width: 500px;
+            padding: 8px 10px;
+            font-size: 23px;
+        }
+        .btn{
+            width: 200px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        .btn:hover{
+            box-shadow: 1px 1px 2px 2px gray;
+        }
+    </style>
 </head>
 <body>
+    <h1 class="app-heading">📕📘Basic PhoneBook</h1>
+    <input type="text" placeholder="Search..." id="search" class="in-box">
+    <button type="button" class="in-box btn">Search</button>
+    <p></p>
+
     
 </body>
 </html>
