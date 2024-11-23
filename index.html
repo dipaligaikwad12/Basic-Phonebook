@@ -16,6 +16,7 @@
             width: 500px;
             padding: 8px 10px;
             font-size: 23px;
+            margin-left: 250px;
         }
 
         .btn {
@@ -32,6 +33,16 @@
         .result-text{
             font-size: 28px;
             font-family: cursive;
+            text-align: center;
+        }
+        .app-heading{
+            margin-top: 100px;
+            text-align: center;
+        }
+        .phone-img{
+            height: 300px;
+            display: block;
+            margin: 30px auto;
         }
     </style>
 </head>
@@ -41,6 +52,7 @@
     <input type="text" placeholder="Search..." id="searchBox" class="in-box">
     <button type="button" class="in-box btn" onclick="search()">Search</button>
     <p id="result" class="result-text"></p>
+    <img src="download.png" class="phone-img">
 
     <script>
         const contacts = {
@@ -62,7 +74,9 @@
             if(number) {
                 result.innerText = `Mobile number of ${query} is ${number}`;
             }
-
+            else{
+                result.innerText = `Contact not found!!`
+            }
         }
 
     </script>
